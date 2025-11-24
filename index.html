@@ -120,10 +120,11 @@
         padding: 14px 32px;
         border-radius: var(--radius-lg);
         border: 1px solid rgba(255, 255, 255, 0.2);
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        background: rgba(12, 18, 32, 0.3);
+      }
+
+      .logo amp-img {
+        max-width: 180px;
       }
 
       main {
@@ -348,7 +349,15 @@
   </head>
   <body>
     <header>
-      <div class="logo">LOGO SITUS</div>
+      <div class="logo">
+        <amp-img
+          src="https://via.placeholder.com/200x60.png?text=LOGO"
+          width="200"
+          height="60"
+          layout="intrinsic"
+          alt="Logo resmi situs"
+        ></amp-img>
+      </div>
     </header>
 
     <main>
