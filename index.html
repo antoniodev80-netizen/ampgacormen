@@ -225,14 +225,13 @@
 
       .cta-main {
         display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
         margin-bottom: 24px;
       }
 
       .cta-main .btn {
-        flex: 1;
-        min-width: 160px;
         padding: 14px;
         text-align: center;
         font-weight: 600;
@@ -241,6 +240,15 @@
         border-radius: var(--radius-md);
         border: 2px solid transparent;
         transition: transform 0.2s ease;
+        max-width: 320px;
+      }
+
+      .cta-main .btn-primary {
+        align-self: flex-start;
+      }
+
+      .cta-main .btn-secondary {
+        align-self: flex-end;
       }
 
       .cta-main .btn-primary {
@@ -341,7 +349,14 @@
 
       @media (min-width: 768px) {
         .cta-main {
-          flex-wrap: nowrap;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .cta-main .btn {
+          max-width: none;
+          flex: 1;
         }
 
         .quick-actions {
